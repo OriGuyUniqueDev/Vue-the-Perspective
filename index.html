@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="style.css"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Vue the Perspective 👓</title>
+	</head>
+	<body class="h-screen w-screen grid place-content-center">
+		<div
+			id="app"
+			class="container h-full w-full"
+		>
+			<div class="flex flex-col justify-center align-middle mx-auto">
+				<lottie-player class="mx-auto" src="https://assets6.lottiefiles.com/packages/lf20_ofa3xwo7.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>
+				<h1 class=" mb-16 text-center text-4xl font-bold text-white">Vue the Perspective</h1>
+			</div>
+
+			<main class="main flex backdrop-blur-sm bg-white/5 shadow-lg px-10 py-10 rounded-3xl   flex-row gap-20">
+				<form class="w-56 flex flex-col gap-3 text-white my-auto">
+					<div class="inputWrapper text-lg flex flex-col">
+						<label
+							class="flex justify-between"
+							for="perspective"
+							>Perspective: <span>{{perspectiveVal}}px</span></label
+						>
+						<input
+							type="range"
+							name="perspective"
+							id="perspective"
+							v-model="perspectiveVal"
+							min="150"
+							max="999"
+						/>
+					</div>
+					<div class="inputWrapper text-lg flex flex-col">
+						<label
+							class="flex justify-between"
+							for="rotateX"
+							>Rotate X: <span>{{rotateX}}deg</span></label
+						>
+						<input
+							type="range"
+							name="rotateX"
+							id="rotatex"
+							min="-180"
+							max="180"
+							v-model="rotateX"
+						/>
+					</div>
+					<div class="inputWrapper text-lg flex flex-col">
+						<label
+							class="flex justify-between"
+							for="rotateY"
+							>Rotate Y: <span>{{rotateY}}deg </span></label
+						>
+						<input
+							type="range"
+							name="rotateY"
+							id="rotateY"
+							min="-180"
+							max="180"
+							v-model="rotateY"
+						/>
+					</div>
+					<div class="inputWrapper text-lg flex flex-col">
+						<label
+							class="flex justify-between"
+							for="rotateZ"
+							>Rotate Z: <span>{{rotateZ}}deg</span>
+						</label>
+						<input
+							type="range"
+							name="rotateZ"
+							id="rotateZ"
+							min="-180"
+							max="180"
+							v-model="rotateZ"
+						/>
+					</div>
+					<div class="btnWarpper flex flex-row justify-around gap-3 mt-3">
+						<button
+							class="button w-28 bg-[#00C9A7] shadow-lg hover:bg-[#00949C] rounded-lg font-semibold text-white py-1 text-md"
+							type="button"
+							@click="reset()"
+						>
+							Reset 
+						</button>
+						<button
+							class="button w-28 bg-[#00C9A7] shadow-lg hover:bg-[#00949C] rounded-lg font-semibold text-white py-1 text-md"
+							@click="copyToClip()"
+							type="button"
+						>
+							Copy 
+						</button>
+					</div>
+				</form>
+				<div class="boxWrapper shadow-xl   grid place-content-center border-2 p-6 rounded-md w-62 h-62">
+					<div
+						class="box shadow-xl bg-indigo-400 w-52 h-52 rounded-lg border-indigo-500 border-4"
+						:style="styleChangeByInput"
+					></div>
+				</div>
+			</main>
+		</div>
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
