@@ -15,7 +15,7 @@ Work Smart Not Hard 💪🏼
 
 ## Screenshot
 
-![App Screenshot](https://github.com/OriGuyUniqueDev/Shopping-List/blob/main/public/Screenshot%202022-09-17%20180911.png?raw=true)
+![App Screenshot](https://github.com/OriGuyUniqueDev/Vue-the-Perspective/blob/main/Screenshot%202022-09-20%20201309.png?raw=true)
 
 #
 
