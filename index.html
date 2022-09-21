@@ -31,7 +31,7 @@
 				<p class="mb-10">This site is developed to use on Desktop (PC)</p>
 				<p>Please switch to Desktop</p>
 			</div>
-			<main v-show="showOnDesktop" class="main flex backdrop-blur-sm bg-white/5 shadow-lg px-10 py-10 rounded-3xl   flex-row gap-20">
+			<main v-cloak v-show="showOnDesktop" class="main flex backdrop-blur-sm bg-white/5 shadow-lg px-10 py-10 rounded-3xl   flex-row gap-20">
 				<form class="w-56 flex flex-col gap-3 text-white my-auto">
 					<div class="inputWrapper text-lg flex flex-col">
 						<label
@@ -116,7 +116,7 @@
 						:style="styleChangeByInput"
 					></div>
 				</div>
-			</main>
+			</mainvv-cloak>
 		</div>
 		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
