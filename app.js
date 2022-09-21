@@ -5,6 +5,8 @@ const vm = Vue.createApp({
 			rotateX: 0,
 			rotateY: 0,
 			rotateZ: 0,
+			showOnMobile: navigator.userAgentData.mobile,
+			showOnDesktop: !navigator.userAgentData.mobile
 		};
 	},
 	computed: {
@@ -32,6 +34,5 @@ const vm = Vue.createApp({
 		}
 	},
 });
-
-                
+/* add message for mobile responsive */ 
 vm.mount("#app");

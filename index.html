@@ -26,8 +26,12 @@
 				<lottie-player class="mx-auto" src="https://assets6.lottiefiles.com/packages/lf20_ofa3xwo7.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>
 				<h1 class=" mb-16 text-center text-4xl font-bold text-white">Vue the Perspective</h1>
 			</div>
-
-			<main class="main flex backdrop-blur-sm bg-white/5 shadow-lg px-10 py-10 rounded-3xl   flex-row gap-20">
+			<div v-show="showOnMobile" class="text-center text-xl mx-3 text-white">
+				<h1 class="mb-2">OOps your not on Desktop mode 🥲</h1>
+				<p class="mb-10">This site is developed to use on Desktop (PC)</p>
+				<p>Please switch to Desktop</p>
+			</div>
+			<main v-show="showOnDesktop" class="main flex backdrop-blur-sm bg-white/5 shadow-lg px-10 py-10 rounded-3xl   flex-row gap-20">
 				<form class="w-56 flex flex-col gap-3 text-white my-auto">
 					<div class="inputWrapper text-lg flex flex-col">
 						<label
