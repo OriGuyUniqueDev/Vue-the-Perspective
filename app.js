@@ -5,8 +5,8 @@ const vm = Vue.createApp({
 			rotateX: 0,
 			rotateY: 0,
 			rotateZ: 0,
-			showOnMobile: navigator.userAgentData.mobile,
-			showOnDesktop: !navigator.userAgentData.mobile
+			showOnMobile:(window.innerWidth <= 600) ? true : false,
+			showOnDesktop: (window.innerWidth > 600) ? true : false
 		};
 	},
 	computed: {
