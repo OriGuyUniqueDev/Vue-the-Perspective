@@ -23,7 +23,7 @@ Work Smart Not Hard 💪🏼
 
 To enjoy this project please visit the site:
 
-https://ori-guy-shopping-list.netlify.app/
+https://vue-perspective-ori-guy.netlify.app
 
 #
 
